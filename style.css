@@ -1,49 +1,73 @@
+/* === Base Styles === */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: #f4f4f4;
+  background: #f2f2f2;
   color: #333;
 }
 
+/* === Header & Navigation === */
 header {
-  background: #222;
+  background-color: #2c3e50;
   color: #fff;
-  padding: 20px;
   text-align: center;
+  padding: 20px;
+}
+
+nav {
+  margin-top: 10px;
 }
 
 nav a {
-  margin: 0 15px;
   color: #fff;
   text-decoration: none;
+  margin: 0 15px;
   font-weight: bold;
+  transition: color 0.3s ease;
 }
 
 nav a:hover {
+  color: #ffd700;
   text-decoration: underline;
 }
 
+/* === Sections === */
 section {
   padding: 20px;
   text-align: center;
 }
 
-img {
+/* === Images === */
+.hero img,
+section img {
   max-width: 90%;
   height: auto;
   border-radius: 8px;
-  margin-top: 15px;
+  display: block;
+  margin: 20px auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.4s ease;
 }
 
-img:hover {
+.hero img:hover,
+section img:hover {
   transform: scale(1.03);
 }
 
+/* === Tagline === */
+.tagline {
+  font-size: 1.2em;
+  margin-top: 10px;
+  font-style: italic;
+  color: #555;
+}
+
+/* === Footer === */
 footer {
-  background: #222;
+  background-color: #2c3e50;
   color: #fff;
   text-align: center;
-  padding: 10px;
+  padding: 15px;
+  font-size: 0.9em;
 }
