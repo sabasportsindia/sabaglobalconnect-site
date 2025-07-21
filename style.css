@@ -6,7 +6,7 @@ body {
   color: #333;
 }
 
-/* Header */
+/* === Header === */
 header {
   background-color: #2c3e50;
   color: #fff;
@@ -24,7 +24,7 @@ header h1 {
   margin-top: 10px;
 }
 
-/* Navigation */
+/* === Navigation === */
 nav {
   margin-top: 15px;
 }
@@ -40,11 +40,13 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* Sections + Text Box */
+/* === Sections === */
 section {
   padding: 30px 20px;
   text-align: center;
 }
+
+/* === Text Box === */
 .text-box {
   max-width: 720px;
   background: #fff;
@@ -63,7 +65,7 @@ section {
   color: #444;
 }
 
-/* CTA Button */
+/* === CTA Button === */
 .cta-button {
   display: inline-block;
   margin-top: 20px;
@@ -73,4 +75,41 @@ section {
   text-decoration: none;
   font-weight: bold;
   border-radius: 5px;
-  transition: background
+  transition: background-color 0.3s ease;
+}
+.cta-button:hover {
+  background-color: #ffd700;
+  color: #2c3e50;
+}
+
+/* === Image Grid (3 per row) === */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-items: center;
+  padding: 10px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.image-grid img {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+.image-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 16px rgba(0,0,0,0.2);
+}
+
+/* === Footer === */
+footer {
+  background-color: #2c3e50;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9em;
+}
