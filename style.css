@@ -3,11 +3,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-image: url('./images/metal-bg.jpg');  /* background texture */
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
+  background-color: #f7f7f7; /* soft white background */
   color: #333;
 }
 
@@ -63,19 +59,20 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* === Section & Text Boxes === */
+/* === Section === */
 section {
   padding: 30px 20px;
   text-align: center;
 }
 
+/* === Text Box === */
 .text-box {
   max-width: 720px;
-  background: rgba(255, 255, 255, 0.95);
+  background: #fff;
   padding: 30px;
   margin: 30px auto;
   border-radius: 10px;
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.08);
 }
 
 .text-box h2 {
@@ -119,7 +116,7 @@ section {
 
 .image-grid img {
   width: 100%;
-  max-width: 320px; /* updated from 280px */
+  max-width: 320px;
   height: auto;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
