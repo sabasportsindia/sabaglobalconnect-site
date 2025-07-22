@@ -3,7 +3,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-image: url('./images/metal-bg.jpg');  /* metal background */
+  background-image: url('./images/metal-bg.jpg');  /* background texture */
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -63,13 +63,12 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* === Section === */
+/* === Section & Text Boxes === */
 section {
   padding: 30px 20px;
   text-align: center;
 }
 
-/* === Text Box === */
 .text-box {
   max-width: 720px;
   background: rgba(255, 255, 255, 0.95);
@@ -78,10 +77,12 @@ section {
   border-radius: 10px;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
 }
+
 .text-box h2 {
   color: #2c3e50;
   margin-bottom: 10px;
 }
+
 .text-box p {
   font-size: 1.1rem;
   line-height: 1.6;
@@ -105,7 +106,7 @@ section {
   color: #2c3e50;
 }
 
-/* === Image Grid (3 per row) === */
+/* === Image Grid === */
 .image-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -118,7 +119,7 @@ section {
 
 .image-grid img {
   width: 100%;
-  max-width: 280px;
+  max-width: 320px; /* updated from 280px */
   height: auto;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -130,7 +131,7 @@ section {
   box-shadow: 0 0 16px rgba(0,0,0,0.2);
 }
 
-/* === WhatsApp Floating Icon === */
+/* === WhatsApp Floating Button === */
 .whatsapp-btn {
   position: fixed;
   bottom: 25px;
