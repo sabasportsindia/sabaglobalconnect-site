@@ -1,3 +1,4 @@
+/* === Base === */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -13,10 +14,28 @@ header {
   text-align: center;
   padding: 20px;
 }
+
 header h1 {
   margin: 0;
-  font-size: 2em;
+  font-size: 2.8em;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background: linear-gradient(45deg, #ffd700, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 4s linear infinite;
 }
+
+@keyframes shine {
+  0% {
+    background-position: -500px;
+  }
+  100% {
+    background-position: 500px;
+  }
+}
+
 .tagline {
   font-size: 1.1em;
   font-style: italic;
@@ -40,7 +59,7 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* === Section === */
+/* === Sections === */
 section {
   padding: 30px 20px;
   text-align: center;
@@ -82,7 +101,7 @@ section {
   color: #2c3e50;
 }
 
-/* === Image Grid (3 per row) === */
+/* === Image Grid (Gallery + Sections) === */
 .image-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
