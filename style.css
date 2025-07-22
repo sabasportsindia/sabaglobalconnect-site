@@ -1,15 +1,19 @@
-/* === Base === */
+/* === Base Styles === */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: #f2f2f2;
+  background-image: url('./images/metal-bg.jpg');  /* metal background */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
   color: #333;
 }
 
 /* === Header === */
 header {
-  background-color: #2c3e50;
+  background-color: rgba(44, 62, 80, 0.9);
   color: #fff;
   text-align: center;
   padding: 20px;
@@ -59,7 +63,7 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* === Sections === */
+/* === Section === */
 section {
   padding: 30px 20px;
   text-align: center;
@@ -68,7 +72,7 @@ section {
 /* === Text Box === */
 .text-box {
   max-width: 720px;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.95);
   padding: 30px;
   margin: 30px auto;
   border-radius: 10px;
@@ -101,7 +105,7 @@ section {
   color: #2c3e50;
 }
 
-/* === Image Grid (Gallery + Sections) === */
+/* === Image Grid (3 per row) === */
 .image-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -111,6 +115,7 @@ section {
   max-width: 1000px;
   margin: 0 auto;
 }
+
 .image-grid img {
   width: 100%;
   max-width: 280px;
@@ -119,40 +124,39 @@ section {
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
 }
+
 .image-grid img:hover {
   transform: scale(1.05);
   box-shadow: 0 0 16px rgba(0,0,0,0.2);
 }
 
-/* === WhatsApp Floating Button === */
+/* === WhatsApp Floating Icon === */
 .whatsapp-btn {
   position: fixed;
   bottom: 25px;
   right: 25px;
   font-size: 28px;
-  background-color: #25D366;
-  color: white;
-  padding: 14px 18px;
+  background-color: transparent;
+  padding: 10px;
   border-radius: 50%;
   text-decoration: none;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
-  transition: transform 0.2s ease;
   z-index: 999;
 }
-.whatsapp-btn:hover {
-  transform: scale(1.1);
+.whatsapp-btn img {
+  width: 28px;
+  height: 28px;
 }
 
 /* === Footer === */
 footer {
-  background-color: #2c3e50;
+  background-color: rgba(44, 62, 80, 0.9);
   color: #fff;
   text-align: center;
   padding: 15px;
   font-size: 0.9em;
 }
 
-/* === Responsive Adjustments === */
+/* === Responsive Grid Adjustments === */
 @media screen and (max-width: 900px) {
   .image-grid {
     grid-template-columns: repeat(2, 1fr);
