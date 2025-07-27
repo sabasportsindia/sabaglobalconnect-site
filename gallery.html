@@ -6,6 +6,8 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <!-- 🔷 HEADER -->
   <header>
     <h1>Saba Global Connect</h1>
     <p class="tagline">Visuals of Global Scrap Trade</p>
@@ -17,89 +19,37 @@
     </nav>
   </header>
 
+  <!-- 🖼️ GALLERY SECTION -->
   <section>
     <div class="text-box">
       <h2>Our Scrap Portfolio</h2>
       <p>
-        Explore visuals from our operations — plastic drums, motor scrap, metal piles, and factory views.  
-        Each image reflects the scale and variety of materials we handle across borders.
+        Explore visuals from our operations — plastic drums, motor scrap, and factory views. Each image reflects the scale and variety of materials we handle across borders.
       </p>
     </div>
 
-    <div class="filter-buttons">
-      <button onclick="filterImages('all')">All</button>
-      <button onclick="filterImages('metal')">Metal</button>
-      <button onclick="filterImages('plastic')">Plastic</button>
-      <button onclick="filterImages('motor')">Motor</button>
-      <button onclick="filterImages('factory')">Factory</button>
-    </div>
-
     <div class="image-grid">
-      <!-- 27 image blocks -->
-      <div class="image-box metal"><img src="images/brass.jpg" alt="Brass"><div class="caption">Brass Scrap</div></div>
-      <div class="image-box metal"><img src="images/brass2.jpg" alt="Brass2"><div class="caption">Brass Closeup</div></div>
-      <div class="image-box metal"><img src="images/copper.jpg" alt="Copper"><div class="caption">Copper Scrap</div></div>
-      <div class="image-box metal"><img src="images/iron-scrap.jpg" alt="Iron"><div class="caption">Iron Scrap</div></div>
-      <div class="image-box metal"><img src="images/metal-scrap1.jpg" alt="Mixed Metal"><div class="caption">Mixed Scrap</div></div>
-      <div class="image-box plastic"><img src="images/plastic-scrap.jpg" alt="Plastic"><div class="caption">Plastic Scrap</div></div>
-      <div class="image-box plastic"><img src="images/can-scrap.jpg" alt="Can"><div class="caption">Can Scrap</div></div>
-      <div class="image-box motor"><img src="images/motor-copper.jpg" alt="Motor"><div class="caption">Motor Copper</div></div>
-      <div class="image-box motor"><img src="images/motor-copper2.jpg" alt="Motor2"><div class="caption">Motor Scrap</div></div>
-      <div class="image-box metal"><img src="images/car-scrap.jpg" alt="Car"><div class="caption">Car Scrap</div></div>
-      <div class="image-box metal"><img src="images/scrap1.jpg" alt="Scrap1"><div class="caption">Scrap Assortment</div></div>
-      <div class="image-box metal"><img src="images/scrap2.jpg" alt="Scrap2"><div class="caption">Scrap Bundle</div></div>
-      <div class="image-box metal"><img src="images/scrap3.jpg" alt="Scrap3"><div class="caption">Scrap Pile</div></div>
-      <div class="image-box metal"><img src="images/scrap4.jpg" alt="Scrap4"><div class="caption">Scrap Texture</div></div>
-      <div class="image-box metal"><img src="images/scrap5.jpg" alt="Scrap5"><div class="caption">Assorted Load</div></div>
-      <div class="image-box metal"><img src="images/Titanium-Metal-Scrap.jpg" alt="Titanium"><div class="caption">Titanium Scrap</div></div>
-      <div class="image-box metal"><img src="images/whell-scrap.jpg" alt="Wheel"><div class="caption">Wheel Scrap</div></div>
-      <div class="image-box metal"><img src="images/railway-track.jpg" alt="Railway"><div class="caption">Railway Track</div></div>
-      <div class="image-box metal"><img src="images/aluminium-taldon-scrap.jpg" alt="Aluminium"><div class="caption">Aluminium Taldon</div></div>
-      <div class="image-box factory"><img src="images/factory.jpg" alt="Factory"><div class="caption">Factory Exterior</div></div>
-      <div class="image-box factory"><img src="images/factory2.jpg" alt="Factory2"><div class="caption">Factory Interior</div></div>
-      <div class="image-box factory"><img src="images/recycling.jpg" alt="Recycling"><div class="caption">Recycling Facility</div></div>
-      <div class="image-box factory"><img src="images/warehouse.jpg.jpg" alt="Warehouse"><div class="caption">Warehouse</div></div>
-      <div class="image-box factory"><img src="images/containers.jpg.jpg" alt="Containers"><div class="caption">Trade Containers</div></div>
-      <div class="image-box plastic"><img src="images/blue-drum.jpg" alt="Drum"><div class="caption">Blue Drum</div></div>
-      <div class="image-box plastic"><img src="images/blue.jpg" alt="Drum2"><div class="caption">Blue Drum Closeup</div></div>
-      <div class="image-box metal"><img src="images/ship-yard.jpg" alt="Shipyard"><div class="caption">Shipyard Zone</div></div>
-    </div>
-
-    <div class="popup" id="popup">
-      <span onclick="closePopup()" class="close-btn">&times;</span>
-      <img id="popup-img" src="" alt="Zoomed">
+      <img src="./images/containers.jpg" alt="Containers">
+      <img src="./images/blue-drum.jpg" alt="Blue Drum Scrap">
+      <img src="./images/blue.jpg" alt="Blue Drum Closeup">
+      <img src="./images/motor-copper.jpg" alt="Motor Copper Wire">
+      <img src="./images/motor-copper2.jpg" alt="Motor Copper Scrap">
+      <img src="./images/factory.jpg" alt="Factory Exterior">
+      <img src="./images/factory2.jpg" alt="Factory Interior">
+      <img src="./images/recycling.jpg" alt="Recycling Facility">
+      <img src="./images/warehouse.jpg" alt="Warehouse View">
     </div>
   </section>
 
+  <!-- 📞 WHATSAPP BUTTON -->
+  <a href="https://wa.me/916396085566" class="whatsapp-btn" target="_blank">
+    <img src="./images/whatsapp-icon.png" alt="WhatsApp" style="width:28px;" />
+  </a>
+
+  <!-- 🔻 FOOTER -->
   <footer>
     <p>© 2024 Saba Global Connect</p>
   </footer>
 
-  <a href="https://wa.me/916396085566" class="whatsapp-btn" target="_blank">
-    <img src="images/whatsapp-icon.png" alt="WhatsApp" style="width:28px;" />
-  </a>
-
-  <script>
-    const popup = document.getElementById('popup');
-    const popupImg = document.getElementById('popup-img');
-    const gridImages = document.querySelectorAll('.image-grid img');
-    gridImages.forEach(img => {
-      img.addEventListener('click', () => {
-        if (popup.style.display === 'flex' && popupImg.src === img.src) {
-          popup.style.display = 'none'; popupImg.src = "";
-        } else {
-          popup.style.display = 'flex'; popupImg.src = img.src;
-        }
-      });
-    });
-    function closePopup() {
-      popup.style.display = 'none'; popupImg.src = "";
-    }
-    function filterImages(category) {
-      document.querySelectorAll('.image-box').forEach(box => {
-        box.style.display = (category === 'all' || box.classList.contains(category)) ? 'block' : 'none';
-      });
-    }
-  </script>
 </body>
 </html>
