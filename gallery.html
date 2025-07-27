@@ -59,7 +59,7 @@
       <img src="./images/aluminium-taldon-scrap.jpg" alt="Aluminium Taldon Scrap">
     </div>
 
-    <!-- Zoom Popup -->
+    <!-- Popup Viewer -->
     <div class="popup" id="popup">
       <span onclick="closePopup()" class="close-btn">&times;</span>
       <img id="popup-img" src="" alt="Zoomed Scrap">
@@ -74,6 +74,28 @@
     <img src="./images/whatsapp-icon.png" alt="WhatsApp" style="width:28px;" />
   </a>
 
-  <script src="script.js"></script>
+  <!-- Inline JS -->
+  <script>
+    const popup = document.getElementById('popup');
+    const popupImg = document.getElementById('popup-img');
+    const gridImages = document.querySelectorAll('.image-grid img');
+
+    gridImages.forEach(img => {
+      img.addEventListener('click', () => {
+        if (popup.style.display === 'flex' && popupImg.src === img.src) {
+          popup.style.display = 'none';
+          popupImg.src = "";
+        } else {
+          popup.style.display = 'flex';
+          popupImg.src = img.src;
+        }
+      });
+    });
+
+    function closePopup() {
+      popup.style.display = 'none';
+      popupImg.src = "";
+    }
+  </script>
 </body>
 </html>
