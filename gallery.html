@@ -26,40 +26,46 @@
       </p>
     </div>
 
-    <div class="image-grid">
-      <!-- Legacy 9 images -->
-      <img src="./images/containers.jpg.jpg" alt="Containers">
-      <img src="./images/blue-drum.jpg" alt="Blue Drum Scrap">
-      <img src="./images/blue.jpg" alt="Blue Drum Closeup">
-      <img src="./images/motor-copper.jpg" alt="Motor Copper Wire">
-      <img src="./images/motor-copper2.jpg" alt="Motor Copper Scrap">
-      <img src="./images/factory.jpg" alt="Factory Exterior">
-      <img src="./images/factory2.jpg" alt="Factory Interior">
-      <img src="./images/recycling.jpg" alt="Recycling Facility">
-      <img src="./images/warehouse.jpg.jpg" alt="Warehouse View">
-
-      <!-- New 18 images -->
-      <img src="./images/brass.jpg" alt="Brass Scrap">
-      <img src="./images/brass2.jpg" alt="Brass Scrap Closeup">
-      <img src="./images/can-scrap.jpg" alt="Can Scrap">
-      <img src="./images/car-scrap.jpg" alt="Car Scrap">
-      <img src="./images/copper.jpg" alt="Copper Scrap">
-      <img src="./images/iron-scrap.jpg" alt="Iron Scrap">
-      <img src="./images/metal-scrap1.jpg" alt="Mixed Metal Scrap">
-      <img src="./images/plastic-scrap.jpg" alt="Plastic Scrap">
-      <img src="./images/railway-track.jpg" alt="Railway Track Scrap">
-      <img src="./images/scrap1.jpg" alt="Scrap Assortment">
-      <img src="./images/scrap2.jpg" alt="Scrap Bundle">
-      <img src="./images/scrap3.jpg" alt="Scrap Pile">
-      <img src="./images/scrap4.jpg" alt="Scrap Close Texture">
-      <img src="./images/scrap5.jpg" alt="Assorted Scrap Load">
-      <img src="./images/ship-yard.jpg" alt="Shipyard Scrap Zone">
-      <img src="./images/Titanium-Metal-Scrap.jpg" alt="Titanium Metal Scrap">
-      <img src="./images/whell-scrap.jpg" alt="Wheel Scrap">
-      <img src="./images/aluminium-taldon-scrap.jpg" alt="Aluminium Taldon Scrap">
+    <!-- 🔘 Filter Buttons -->
+    <div class="filter-buttons">
+      <button onclick="filterImages('all')">All</button>
+      <button onclick="filterImages('metal')">Metal</button>
+      <button onclick="filterImages('plastic')">Plastic</button>
+      <button onclick="filterImages('motor')">Motor</button>
+      <button onclick="filterImages('factory')">Factory</button>
     </div>
 
-    <!-- Popup Viewer -->
+    <!-- 🖼️ Image Grid -->
+    <div class="image-grid">
+      <!-- Sample 6 images shown below — repeat this block for all 27 -->
+      <div class="image-box metal">
+        <img src="./images/brass.jpg" alt="Brass Scrap">
+        <div class="caption">Brass Scrap</div>
+      </div>
+      <div class="image-box metal">
+        <img src="./images/copper.jpg" alt="Copper Scrap">
+        <div class="caption">Copper Scrap</div>
+      </div>
+      <div class="image-box plastic">
+        <img src="./images/plastic-scrap.jpg" alt="Plastic Scrap">
+        <div class="caption">Plastic Scrap</div>
+      </div>
+      <div class="image-box motor">
+        <img src="./images/motor-copper.jpg" alt="Motor Copper Wire">
+        <div class="caption">Motor Copper Wire</div>
+      </div>
+      <div class="image-box factory">
+        <img src="./images/factory.jpg" alt="Factory Exterior">
+        <div class="caption">Factory Exterior</div>
+      </div>
+      <div class="image-box metal">
+        <img src="./images/iron-scrap.jpg" alt="Iron Scrap">
+        <div class="caption">Iron Scrap</div>
+      </div>
+      <!-- Continue same structure for all remaining images -->
+    </div>
+
+    <!-- 🔍 Popup Viewer -->
     <div class="popup" id="popup">
       <span onclick="closePopup()" class="close-btn">&times;</span>
       <img id="popup-img" src="" alt="Zoomed Scrap">
@@ -74,7 +80,7 @@
     <img src="./images/whatsapp-icon.png" alt="WhatsApp" style="width:28px;" />
   </a>
 
-  <!-- Inline JS -->
+  <!-- ⚙️ Inline JS -->
   <script>
     const popup = document.getElementById('popup');
     const popupImg = document.getElementById('popup-img');
@@ -95,6 +101,13 @@
     function closePopup() {
       popup.style.display = 'none';
       popupImg.src = "";
+    }
+
+    function filterImages(category) {
+      const boxes = document.querySelectorAll('.image-box');
+      boxes.forEach(box => {
+        box.style.display = (category === 'all' || box.classList.contains(category)) ? 'block' : 'none';
+      });
     }
   </script>
 </body>
